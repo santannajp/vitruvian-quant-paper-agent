@@ -1,9 +1,13 @@
-# pyrefly: ignore [missing-import]
 from sentence_transformers import SentenceTransformer
 
-model =SentenceTransformer(
-    'BAAI/bge-small-en'
-    )
+model = SentenceTransformer(
+    "BAAI/bge-small-en"
+)
 
-def embed(texts:str):
-    return model.encode(texts).tolist()
+
+def embed_text(text: str):
+    return model.encode(text).tolist()
+
+
+def embed_chunks(chunks: list[str]):
+    return model.encode(chunks).tolist()
