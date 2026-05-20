@@ -4,12 +4,12 @@ results = retrieve(
     "What is DistilBERT?"
 )
 
-for r in results:
+for result in results:
 
     print("=" * 80)
 
-    print("SCORE:", r["score"])
+    print(result["score"])
 
-    print("SECTION:", r["section"])
+    print(result["section"])
 
-    print(r["content"][:1000])
+    print(result["content"][:1000])

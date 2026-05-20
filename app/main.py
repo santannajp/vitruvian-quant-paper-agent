@@ -1,8 +1,7 @@
 from fastapi import FastAPI
 
+from app.api.routes.papers import router
+
 app = FastAPI()
 
-#criando api basica para testar se está funcionando e rodando com uvicorn
-@app.get("/")
-def health():
-    return {"status": "ok"}
+app.include_router(router)
